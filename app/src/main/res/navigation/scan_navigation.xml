@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scan_navigation"
+    app:startDestination="@id/cameraFragment2">
+
+    <fragment
+        android:id="@+id/cameraFragment2"
+        android:name="com.capstone.codet.ui.scan.result.CameraFragment"
+        android:label="CameraFragment" >
+        <action
+            android:id="@+id/action_cameraFragment2_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.capstone.codet.ui.scan.result.ResultFragment"
+        android:label="ResultFragment" >
+        <argument
+            android:name="resultImage"
+            app:argType="com.capstone.codet.data.model.ImageResult" />
+    </fragment>
+</navigation>

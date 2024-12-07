@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.capstone.codet.ui.home.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.capstone.codet.ui.scan.ScanFragment"
+        android:label="ScanFragment" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.capstone.codet.ui.history.HistoryFragment"
+        android:label="HistoryFragment" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.capstone.codet.ui.setting.SettingFragment"
+        android:label="SettingFragment" />
+</navigation>
