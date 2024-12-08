@@ -1,6 +1,7 @@
 package com.capstone.codet.ui.home
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import com.capstone.codet.R
 import com.capstone.codet.data.adapter.FunfactAdapter
 import com.capstone.codet.data.model.Funfact
 import com.capstone.codet.databinding.FragmentHomeBinding
+import com.capstone.codet.ui.scan.result.ResultActivity
 
 class HomeFragment:Fragment() {
 
@@ -38,6 +40,11 @@ class HomeFragment:Fragment() {
                 setHasFixedSize(true)
                 adapter = tipsAdapter
             }
+        }
+
+        binding.btnScanSekarang.setOnClickListener {
+            val intent = Intent(requireContext(), ResultActivity::class.java)
+            startActivity(intent)
         }
 
 

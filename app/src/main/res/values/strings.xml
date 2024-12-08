@@ -29,5 +29,23 @@
         <item>Ut accumsan elit nec lectus pharetra, at auctor libero efficitur. Nulla consequat justo sed purus tempus.</item>
     </string-array>
 
+    <string-array name="data_date">
+        <item>07–07-2024</item>
+        <item>07–07-2024</item>
+        <item>07–07-2024</item>
+        <item>07–07-2024</item>
+        <item>07–07-2024</item>
+        <item>07–07-2024</item>
+    </string-array>
+
+    <string-array name="data_photo">
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_placeholder</item>
+    </string-array>
+
 
 </resources>

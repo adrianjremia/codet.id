@@ -27,6 +27,14 @@
             android:exported="false"
             />
 
+        <activity android:name=".ui.history.DetailHistoryActivity"
+            android:exported="false"
+            />
+
+        <activity android:name=".ui.about.AboutActivity"
+            android:exported="false"
+            />
+
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true">
