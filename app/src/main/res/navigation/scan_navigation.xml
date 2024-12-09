@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/cameraFragment2"
-        android:name="com.capstone.codet.ui.scan.result.CameraFragment"
+        android:name="com.capstone.codet.ui.result.CameraFragment"
         android:label="CameraFragment" >
         <action
             android:id="@+id/action_cameraFragment2_to_resultFragment"
@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.capstone.codet.ui.scan.result.ResultFragment"
+        android:name="com.capstone.codet.ui.result.ResultFragment"
         android:label="ResultFragment" >
         <argument
             android:name="resultImage"

@@ -19,7 +19,7 @@
         android:theme="@style/Theme.Codet"
         tools:targetApi="31">
 
-        <activity android:name=".ui.scan.result.ResultActivity"
+        <activity android:name=".ui.result.ResultActivity"
             android:exported="false"
             />
 
@@ -32,6 +32,14 @@
             />
 
         <activity android:name=".ui.about.AboutActivity"
+            android:exported="false"
+            />
+
+        <activity android:name=".ui.scan.CameraActivity"
+            android:exported="false"
+            />
+
+        <activity android:name=".ui.scan.ResultScanActivity"
             android:exported="false"
             />
 

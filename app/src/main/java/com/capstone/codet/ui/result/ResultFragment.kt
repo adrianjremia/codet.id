@@ -1,4 +1,4 @@
-package com.capstone.codet.ui.scan.result
+package com.capstone.codet.ui.result
 
 import android.graphics.Bitmap
 import android.net.Uri

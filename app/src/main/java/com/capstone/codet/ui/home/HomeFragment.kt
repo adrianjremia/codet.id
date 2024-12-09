@@ -12,7 +12,7 @@ import com.capstone.codet.R
 import com.capstone.codet.data.adapter.FunfactAdapter
 import com.capstone.codet.data.model.Funfact
 import com.capstone.codet.databinding.FragmentHomeBinding
-import com.capstone.codet.ui.scan.result.ResultActivity
+import com.capstone.codet.ui.result.ResultActivity
 
 class HomeFragment:Fragment() {
 

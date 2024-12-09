@@ -1,4 +1,4 @@
-package com.capstone.codet.ui.scan.result
+package com.capstone.codet.ui.result
 
 import android.app.Activity
 import android.os.Bundle

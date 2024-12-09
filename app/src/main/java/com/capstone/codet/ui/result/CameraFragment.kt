@@ -1,4 +1,4 @@
-package com.capstone.codet.ui.scan.result
+package com.capstone.codet.ui.result
 
 import android.Manifest
 import android.content.Context
@@ -142,9 +142,10 @@ class CameraFragment:Fragment() {
     }
 
     private fun movesToUpload(imageResult: ImageResult) {
-        val action = CameraFragmentDirections.actionCameraFragment2ToResultFragment(
-            imageResult
-        )
+        val action =
+            CameraFragmentDirections.actionCameraFragment2ToResultFragment(
+                imageResult
+            )
         findNavController().navigate(action)
     }
 
