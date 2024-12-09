@@ -18,7 +18,7 @@
         tools:layout="@layout/fragment_scan" />
 
     <fragment
-        android:id="@+@string/title_history"
+        android:id="@string/title_history"
         android:name="com.dicoding.codet.ui.history.HistoryFragment"
         android:label="@string/title_history"
         tools:layout="@layout/fragment_history" />
