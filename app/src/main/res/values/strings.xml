@@ -1,6 +1,51 @@
 <resources>
     <string name="app_name">Codet</string>
-    <string name="title_home">Home</string>
-    <string name="title_scan">Scan</string>
-    <string name="title_history">History</string>
+
+
+    <string name="close_camera">Close Camera</string>
+    <string name="take_a_photo">Take a Photo</string>
+    <string name="flip_to_front_camera">Flip to Front Camera</string>
+    <string name="pick_gallery">Pick a photo from gallery</string>
+    <string name="access_denied">Access Denied</string>
+    <string name="taking_photo_failed">Successfully take a photo</string>
+    <string name="open_camera_failed">Failed to open camera.</string>
+
+    <string-array name="data_title">
+        <item>1. Lorem ipsum</item>
+        <item>2. Lorem ipsum</item>
+        <item>3. Lorem ipsum</item>
+        <item>4. Lorem ipsum</item>
+        <item>5. Lorem ipsum</item>
+        <item>6. Lorem ipsum</item>
+
+    </string-array>
+
+    <string-array name="data_description">
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur lacus vitae nulla accumsan vehicula.</item>
+        <item>Quisque euismod turpis non turpis varius, nec bibendum sapien malesuada. Ut a eros in urna viverra.</item>
+        <item>Fusce id ligula a lacus feugiat fermentum. Nulla facilisi. Cras vel turpis quis risus volutpat pharetra.</item>
+        <item>Vestibulum aliquet magna nec orci consequat, nec suscipit lectus ultricies. Integer in sem id risus viverra.</item>
+        <item>Nam commodo felis non sem dictum, vel eleifend nisl volutpat. Vivamus facilisis dui eu ultricies viverra.</item>
+        <item>Ut accumsan elit nec lectus pharetra, at auctor libero efficitur. Nulla consequat justo sed purus tempus.</item>
+    </string-array>
+
+    <string-array name="data_date">
+        <item>07–07-2024</item>
+        <item>07–07-2024</item>
+        <item>07–07-2024</item>
+        <item>07–07-2024</item>
+        <item>07–07-2024</item>
+        <item>07–07-2024</item>
+    </string-array>
+
+    <string-array name="data_photo">
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_placeholder</item>
+    </string-array>
+
+
 </resources>
