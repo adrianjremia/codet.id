@@ -7,13 +7,11 @@ plugins {
 }
 
 android {
-<<<<<<< HEAD
+
     namespace = "com.dicoding.codet"
     compileSdk = 35
-=======
     namespace = "com.capstone.codet"
     compileSdk = 34
->>>>>>> db2aa1232c1c7e764e4133f1dcd74814e0159818
 
     defaultConfig {
         applicationId = "com.capstone.codet"

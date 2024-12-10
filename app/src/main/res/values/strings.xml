@@ -47,5 +47,8 @@
         <item>@drawable/ic_placeholder</item>
     </string-array>
 
+    <string name="title_home">Home</string>
+    <string name="title_scan">Scan</string>
+    <string name="title_history">History</string>
 
 </resources>

@@ -2,11 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-<<<<<<< HEAD
-    <color name="light_green">#90EE90</color> <!-- Example light green -->
-    <color name="brown">#A52A2A</color> <!-- Example brown -->
-=======
     <color name="green">#0EC843</color>
     <color name="brown">#4E3625</color>
->>>>>>> db2aa1232c1c7e764e4133f1dcd74814e0159818
 </resources>
