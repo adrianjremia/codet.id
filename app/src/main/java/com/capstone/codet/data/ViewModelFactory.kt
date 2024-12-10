@@ -5,17 +5,26 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.codet.data.di.Injection
 import com.capstone.codet.data.preference.SettingPreference
+import com.capstone.codet.ui.result.ResultViewModel
+import com.capstone.codet.ui.scan.ScanViewModel
 import com.capstone.codet.ui.setting.SettingViewModel
 
-class ViewModelFactory(private val pref: SettingPreference): ViewModelProvider.NewInstanceFactory() {
+class ViewModelFactory( private val repository: MainRepository): ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when {
 
-            modelClass.isAssignableFrom(SettingViewModel::class.java) -> {
-                SettingViewModel(pref) as T
+            modelClass.isAssignableFrom(ScanViewModel::class.java) -> {
+                ScanViewModel(repository) as T
             }
+            modelClass.isAssignableFrom(ResultViewModel::class.java) -> {
+                ResultViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(SettingViewModel::class.java) -> {
+                SettingViewModel(repository) as T
+            }
+
 
 
             else -> throw IllegalArgumentException("Unknown ViewModel Class: ${modelClass.name}")
@@ -27,9 +36,8 @@ class ViewModelFactory(private val pref: SettingPreference): ViewModelProvider.N
 
         fun getInstance(context: Context): ViewModelFactory {
             return instance ?: synchronized(this) {
-
-                val pref = Injection.provideSettingPreference(context)
-                instance ?: ViewModelFactory(pref).also { instance = it }
+                val repository = Injection.provideRepository(context)
+                instance ?: ViewModelFactory(repository).also { instance = it }
             }
         }
     }

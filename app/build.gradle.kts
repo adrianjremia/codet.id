@@ -7,9 +7,6 @@ plugins {
 }
 
 android {
-
-    namespace = "com.dicoding.codet"
-    compileSdk = 35
     namespace = "com.capstone.codet"
     compileSdk = 34
 

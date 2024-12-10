@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="286dp"
+        android:layout_height="243dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/codet_logosplash" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="codet.id"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+        <Button
+            android:id="@+id/btnLoginStart"
+            android:layout_width="164dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/brown"
+            android:text="Login"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="521dp" />
+
+        <Button
+            android:id="@+id/btnRegisterStart"
+            android:layout_width="164dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/brown"
+            android:text="Register"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="215dp"
+            tools:layout_editor_absoluteY="521dp" />
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

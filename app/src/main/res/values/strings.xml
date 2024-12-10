@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Codet</string>
 
+    <string name="predicting">Predicting</string>
+    <string name="prediction_result">Prediction Result:</string>
+    <string name="prediction_error">Error</string>
 
     <string name="close_camera">Close Camera</string>
     <string name="take_a_photo">Take a Photo</string>
@@ -9,6 +12,15 @@
     <string name="access_denied">Access Denied</string>
     <string name="taking_photo_failed">Successfully take a photo</string>
     <string name="open_camera_failed">Failed to open camera.</string>
+
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="email_error">Invalid email format.</string>
+    <string name="password_error">Password must at least 8 chars.</string>
+    <string name="password_confirmation_hint">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="name_error">Name musn\'t be empty!</string>
+    <string name="form_error">Form must be filled correctly.</string>
 
     <string-array name="data_title">
         <item>1. Lorem ipsum</item>
@@ -47,8 +59,5 @@
         <item>@drawable/ic_placeholder</item>
     </string-array>
 
-    <string name="title_home">Home</string>
-    <string name="title_scan">Scan</string>
-    <string name="title_history">History</string>
 
 </resources>
