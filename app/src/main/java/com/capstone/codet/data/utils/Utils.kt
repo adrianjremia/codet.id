@@ -102,3 +102,21 @@ fun createTempFile(context: Context): File {
     val storageDir: File? = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
     return File.createTempFile(timeStamp, ".jpg", storageDir)
 }
+
+fun formatDate(
+    dateString: String,
+    currentFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+    desiredFormat: String = "dd MMM yyyy"
+): String {
+    return try {
+        val inputFormat = SimpleDateFormat(currentFormat, Locale.getDefault())
+        val outputFormat = SimpleDateFormat(desiredFormat, Locale.getDefault())
+        val date = inputFormat.parse(dateString)
+        date?.let {
+            outputFormat.format(it)
+        } ?: ""
+    } catch (e: Exception) {
+        e.printStackTrace()
+        ""
+    }
+}

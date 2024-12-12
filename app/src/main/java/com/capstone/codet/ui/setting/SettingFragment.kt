@@ -11,6 +11,7 @@ import androidx.fragment.app.viewModels
 import com.capstone.codet.data.ViewModelFactory
 import com.capstone.codet.databinding.FragmentSettingBinding
 import com.capstone.codet.ui.about.AboutActivity
+import com.capstone.codet.ui.auth.LoginActivity
 
 class SettingFragment:Fragment() {
 
@@ -47,8 +48,22 @@ class SettingFragment:Fragment() {
             startActivity(intent)
         }
 
+        binding.btnLogout.setOnClickListener {
+            viewModel.logout()
+            movesToAuth()
+        }
+
 
     }
+
+    private fun movesToAuth() {
+        val intents = Intent(requireContext(), LoginActivity::class.java)
+        intents.flags =
+            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intents)
+        requireActivity().finish()
+    }
+
 
     // Simplified theme switch listener: Only save the setting
     private val themeSwitchListener = CompoundButton.OnCheckedChangeListener { _, isChecked ->

@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.capstone.codet.data.model.History
 import com.capstone.codet.databinding.ActivityHistoryDetailBinding
 import com.capstone.codet.R
+import com.capstone.codet.data.response.ListHistory
 
 class DetailHistoryActivity:AppCompatActivity() {
 
@@ -25,20 +26,21 @@ class DetailHistoryActivity:AppCompatActivity() {
 
     @SuppressLint("SetJavaScriptEnabled")
     private fun setDetailData() {
-        val history = intent.getParcelableExtra<History>(EXTRA_HISTORY)
+        val history = intent.getParcelableExtra<ListHistory>(EXTRA_HISTORY)
 
         binding.apply {
             history?.let {
 
 
                 Glide.with(this@DetailHistoryActivity)
-                    .load(history?.img)
+                    .load(history.imageURL)
                     .placeholder(R.drawable.ic_placeholder)
                     .into(imgResultHistory)
 
-                tvTitleHistory.text = history?.title
-                tvDateHistory.text = history?.date
-                tvDescHistory.text = history?.desc
+                tvNamaPenyakit.text = history.status
+                tvPenyakitDesc.text = history.details
+                tvIndication.text = history.indication
+                tvTreatment.text = history.treatment
 
 
 

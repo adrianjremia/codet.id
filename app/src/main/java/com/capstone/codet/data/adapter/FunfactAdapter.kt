@@ -8,32 +8,35 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.codet.R
 import com.capstone.codet.data.model.Funfact
+import com.capstone.codet.databinding.ItemFunfactBinding
 
-class FunfactAdapter(private val listCountry:ArrayList<Funfact>): RecyclerView.Adapter<FunfactAdapter.ViewHolder>()  {
+class FunfactAdapter(private var listFunFacts: List<Funfact>) :
+    RecyclerView.Adapter<FunfactAdapter.FunfactViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_funfact, parent, false)
-        return ViewHolder(view)
+    class FunfactViewHolder(private val binding: ItemFunfactBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(data: Funfact) {
+            binding.apply {
+                tvItemName.text = data.title
+                tvItemDescription.text = data.desc
+            }
+        }
     }
 
-    override fun getItemCount(): Int = listCountry.size
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val (name, description,) = listCountry[position]
-
-
-        holder.tvName.text = name
-        holder.tvDescription.text = description
-
-        //holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listCountry[holder.adapterPosition]) }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FunfactViewHolder {
+        val binding = ItemFunfactBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return FunfactViewHolder(binding)
     }
 
-    class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
+    override fun getItemCount(): Int = listFunFacts.size
 
-
-        val tvName : TextView = itemView.findViewById(R.id.tv_item_name)
-        val tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
+    override fun onBindViewHolder(holder: FunfactViewHolder, position: Int) {
+        holder.bind(listFunFacts[position])
     }
 
-
+    fun updateData(newList: List<Funfact>) {
+        listFunFacts = newList
+        notifyDataSetChanged()
+    }
 }

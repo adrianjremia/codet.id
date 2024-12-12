@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Codet</string>
 
+    <string name="title_home">Home</string>
+    <string name="title_scan">Scan</string>
+    <string name="title_history">History</string>
+
+    <string name="predicting">Predicting</string>
+    <string name="prediction_result">Prediction Result:</string>
+    <string name="prediction_error">Error</string>
 
     <string name="close_camera">Close Camera</string>
     <string name="take_a_photo">Take a Photo</string>
@@ -10,23 +17,69 @@
     <string name="taking_photo_failed">Successfully take a photo</string>
     <string name="open_camera_failed">Failed to open camera.</string>
 
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="email_error">Invalid email format.</string>
+    <string name="password_error">Password must at least 8 chars.</string>
+    <string name="password_confirmation_hint">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="name_error">Name musn\'t be empty!</string>
+    <string name="form_error">Form must be filled correctly.</string>
+
+    <string name="bud_rot">Bud Rot</string>
+    <string name="gray_leaf_spot">Gray Leaf Spot</string>
+    <string name="leaf_rot">Leaf Rot</string>
+    <string name="stem_bleeding">Stem Bleeding</string>
+
+    <string name="bud_rot_desc">
+        Atur penghasilanmu dalam tiga bagian:\n
+1. 50% untuk kebutuhan: seperti makanan, transportasi, dan tagihan.\n
+2. 30% untuk keinginan: seperti hiburan, belanja, dan makan di luar.\n
+3. 20% untuk tabungan atau investasi: untuk masa depan.
+    </string>
+
+    <string name="gray_leaf_desc">
+        Atur penghasilanmu dalam tiga bagian:\n
+1. 50% untuk kebutuhan: seperti makanan, transportasi, dan tagihan.\n
+2. 30% untuk keinginan: seperti hiburan, belanja, dan makan di luar.\n
+3. 20% untuk tabungan atau investasi: untuk masa depan.
+    </string>
+
+    <string name="leaf_rot_desc">
+
+        Atur penghasilanmu dalam tiga bagian:\n
+1. 50% untuk kebutuhan: seperti makanan, transportasi, dan tagihan.\n
+2. 30% untuk keinginan: seperti hiburan, belanja, dan makan di luar.\n
+3. 20% untuk tabungan atau investasi: untuk masa depan.
+    </string>
+
+        <string name="stem_bleeding_desc">
+
+        Atur penghasilanmu dalam tiga bagian:\n
+1. 50% untuk kebutuhan: seperti makanan, transportasi, dan tagihan.\n
+2. 30% untuk keinginan: seperti hiburan, belanja, dan makan di luar.\n
+3. 20% untuk tabungan atau investasi: untuk masa depan.
+    </string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+
+
     <string-array name="data_title">
-        <item>1. Lorem ipsum</item>
-        <item>2. Lorem ipsum</item>
-        <item>3. Lorem ipsum</item>
-        <item>4. Lorem ipsum</item>
-        <item>5. Lorem ipsum</item>
-        <item>6. Lorem ipsum</item>
+        <item>Salah Satu Tanaman Tertua</item>
+        <item>"Pohon Seribu Guna"</item>
+        <item>Kelapa dan Kesehatan</item>
+        <item>Air Kelapa, Minuman Alami</item>
+        <item>Tahan Lama di Laut</item>
+
 
     </string-array>
 
     <string-array name="data_description">
-        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur lacus vitae nulla accumsan vehicula.</item>
-        <item>Quisque euismod turpis non turpis varius, nec bibendum sapien malesuada. Ut a eros in urna viverra.</item>
-        <item>Fusce id ligula a lacus feugiat fermentum. Nulla facilisi. Cras vel turpis quis risus volutpat pharetra.</item>
-        <item>Vestibulum aliquet magna nec orci consequat, nec suscipit lectus ultricies. Integer in sem id risus viverra.</item>
-        <item>Nam commodo felis non sem dictum, vel eleifend nisl volutpat. Vivamus facilisis dui eu ultricies viverra.</item>
-        <item>Ut accumsan elit nec lectus pharetra, at auctor libero efficitur. Nulla consequat justo sed purus tempus.</item>
+        <item>Kelapa telah ada selama lebih dari 4.000 tahun dan diyakini berasal dari daerah tropis Asia Tenggara.</item>
+        <item>Pohon kelapa sering dijuluki "pohon kehidupan" karena hampir semua bagiannya bisa dimanfaatkan, mulai dari buah, daun, batang, hingga akarnya.</item>
+        <item>Minyak kelapa mengandung asam laurat yang berfungsi sebagai antibakteri dan antivirus, baik untuk menjaga kesehatan kulit dan rambut.</item>
+        <item>Air kelapa muda mengandung elektrolit alami yang mirip dengan plasma darah manusia dan dikenal sebagai minuman penyegar alami.</item>
+        <item>Buah kelapa dapat mengapung di laut selama berbulan-bulan tanpa rusak, yang membuatnya bisa menyebar ke berbagai pulau secara alami.</item>
+
     </string-array>
 
     <string-array name="data_date">
@@ -47,8 +100,5 @@
         <item>@drawable/ic_placeholder</item>
     </string-array>
 
-    <string name="title_home">Home</string>
-    <string name="title_scan">Scan</string>
-    <string name="title_history">History</string>
 
 </resources>
