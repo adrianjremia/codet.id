@@ -22,7 +22,6 @@ class SettingFragment:Fragment() {
         ViewModelFactory.getInstance(requireActivity())
     }
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
