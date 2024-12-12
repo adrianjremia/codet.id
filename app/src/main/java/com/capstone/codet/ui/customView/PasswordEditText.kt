@@ -58,7 +58,6 @@ class PasswordEditText : AppCompatEditText {
 
         addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-                // Do Nothing
             }
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
@@ -66,7 +65,6 @@ class PasswordEditText : AppCompatEditText {
             }
 
             override fun afterTextChanged(s: Editable) {
-                //Do nothing
             }
         })
     }
@@ -75,7 +73,6 @@ class PasswordEditText : AppCompatEditText {
     private fun handlePasswordVisibilityToggle() {
         setOnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_UP) {
-                // Check if the user clicked on the drawable (toggle icon) at the end
                 if (event.rawX >= (right - compoundPaddingRight)) {
                     isPasswordVisible = !isPasswordVisible
                     updatePasswordTransformation()
@@ -88,15 +85,12 @@ class PasswordEditText : AppCompatEditText {
 
     private fun updatePasswordTransformation() {
         if (isPasswordVisible) {
-            // Show password as plain text
             transformationMethod = null
             setCompoundDrawablesWithIntrinsicBounds(passwordIcon, null, visibilityOnIcon, null)
         } else {
-            // Mask password
             transformationMethod = PasswordTransformationMethod.getInstance()
             setCompoundDrawablesWithIntrinsicBounds(passwordIcon, null, visibilityOffIcon, null)
         }
-        // Move cursor to the end of the text
         setSelection(text?.length ?: 0)
     }
 }

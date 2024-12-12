@@ -54,12 +54,10 @@ class ResultFragment : Fragment() {
         }
 
         if (imageFile != null) {
-            // Load the image into the ImageView
             Glide.with(requireActivity())
                 .load(imageFile)
                 .into(binding.imgResult)
 
-            // Upload the image for prediction
             viewModel.uploadPrediction(imageFile)
         } else {
             binding.tvNamaPenyakit.text = "Prediction Error"
@@ -86,7 +84,6 @@ class ResultFragment : Fragment() {
                             tvPenyakitDesc.text = prediction.details
                             tvIndication.text = prediction.indication
                             tvTreatment.text = prediction.treatment
-                            //tvDateCreated.text = prediction.createdAt?.let { formatDate(it) }
 
                             cardView.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.red)
                         }
@@ -102,7 +99,6 @@ class ResultFragment : Fragment() {
                     binding.tvIndication.text = getString(R.string.prediction_error)
                     binding.tvTreatment.text = getString(R.string.prediction_error)
                     binding.cardView.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.grey)
-                    //Toast.makeText(this, "Error: ${result.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         }

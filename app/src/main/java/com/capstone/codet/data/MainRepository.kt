@@ -91,7 +91,6 @@ class MainRepository(
             val api = ApiConfig.getApiService(token)
             val response = api.getHistory()
 
-            // Extract the list of stories
             val message = response.message
             if (message != null) {
                 emit(Result.Success(message))
@@ -118,11 +117,9 @@ class MainRepository(
         try {
             val token = preference.getSession().first().token
             val api = ApiConfig.getApiService(token)
-            // Attempt to fetch prediction
             val successResponse = api.getResult(multipartBody)
             emit(Result.Success(successResponse))
         } catch (e: HttpException) {
-            // Handle HTTP error responses
             val errorBody = e.response()?.errorBody()?.string()
             if (!errorBody.isNullOrEmpty()) {
                 try {
@@ -135,7 +132,6 @@ class MainRepository(
                 emit(Result.Error("Unknown server error"))
             }
         } catch (e: Exception) {
-            // Handle other exceptions
             emit(Result.Error("Unexpected error: ${e.localizedMessage ?: "Error occurred"}"))
         }
     }
@@ -154,11 +150,9 @@ class MainRepository(
         )
 
         try {
-            // Attempt to fetch prediction
             val successResponse = mlApiService.getPredict(multipartBody)
             emit(Result.Success(successResponse))
         } catch (e: HttpException) {
-            // Handle HTTP error responses
             val errorBody = e.response()?.errorBody()?.string()
             if (!errorBody.isNullOrEmpty()) {
                 try {
@@ -171,13 +165,11 @@ class MainRepository(
                 emit(Result.Error("Unknown server error"))
             }
         } catch (e: Exception) {
-            // Handle other exceptions
             emit(Result.Error("Unexpected error: ${e.localizedMessage ?: "Error occurred"}"))
         }
     }
 
 
-    //preference theme
     fun getThemeSetting(): Flow<Boolean> {
         return preference.getThemeSetting()
     }

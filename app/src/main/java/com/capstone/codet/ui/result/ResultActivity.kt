@@ -19,9 +19,7 @@ class ResultActivity:AppCompatActivity() {
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
-        setResult(Activity.RESULT_OK) // Or you can pass additional data with Intent if needed.
+        setResult(Activity.RESULT_OK)
         finish()
     }
-
-
 }

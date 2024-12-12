@@ -38,7 +38,6 @@ class HomeFragment:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize RecyclerView
         funfactAdapter = FunfactAdapter(emptyList())
         binding.rvFunfact.apply {
             layoutManager = LinearLayoutManager(context)
@@ -46,12 +45,10 @@ class HomeFragment:Fragment() {
             adapter = funfactAdapter
         }
 
-        // Observe ViewModel data
         viewModel.funFacts.observe(viewLifecycleOwner) { funFacts ->
             funfactAdapter.updateData(funFacts)
         }
 
-        // Load data if not already loaded
         if (viewModel.funFacts.value.isNullOrEmpty()) {
             val dataName = resources.getStringArray(R.array.data_title)
             val dataDescription = resources.getStringArray(R.array.data_description)
@@ -63,5 +60,4 @@ class HomeFragment:Fragment() {
             startActivity(intent)
         }
     }
-
 }

@@ -46,10 +46,7 @@ class CameraFragment:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
         launchesPermission.launch(PERMISSIONS.first())
-
 
         setsUpView()
     }
@@ -113,7 +110,6 @@ class CameraFragment:Fragment() {
     }
 
     private fun takesPhoto() {
-        // EspressoIdlingResource.increment()
         val imgCapture = imgCapture ?: return
         val photoFiles = createFile(requireActivity().application)
         val outputsOptions = ImageCapture.OutputFileOptions.Builder(photoFiles).build()
@@ -127,7 +123,6 @@ class CameraFragment:Fragment() {
                         camerasSelector == CameraSelector.DEFAULT_BACK_CAMERA
                     )
                     movesToUpload(ImageResult(photoFiles, imageBitmap = rotatedBitmaps))
-                    //  EspressoIdlingResource.decrement()
                 }
                 override fun onError(exception: ImageCaptureException) {
                     Toast.makeText(
@@ -135,7 +130,6 @@ class CameraFragment:Fragment() {
                         getString(R.string.taking_photo_failed),
                         Toast.LENGTH_SHORT
                     ).show()
-                    //  EspressoIdlingResource.decrement()
                 }
             }
         )

@@ -20,7 +20,6 @@ class FunfactDetailActivity:AppCompatActivity() {
         setContentView(binding.root)
 
         setDetailData()
-
     }
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -29,23 +28,13 @@ class FunfactDetailActivity:AppCompatActivity() {
 
         binding.apply {
             history?.let {
-
-
-
                 tvTitleFunfact.text = history?.title
                 tvDescFunfact.text = history?.desc
-
-
             }
-
-
         }
     }
-
-
 
     companion object {
         const val EXTRA_FUNFACT = "extra_funfact"
     }
-
 }

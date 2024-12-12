@@ -41,7 +41,6 @@ class CameraActivity:AppCompatActivity() {
             else CameraSelector.DEFAULT_BACK_CAMERA
             startCamera()
         }
-
     }
 
     public override fun onResume() {
@@ -131,7 +130,4 @@ class CameraActivity:AppCompatActivity() {
         }
         supportActionBar?.hide()
     }
-
-
-
 }

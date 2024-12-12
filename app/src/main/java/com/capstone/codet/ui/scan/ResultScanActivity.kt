@@ -29,18 +29,14 @@ class ResultScanActivity : AppCompatActivity() {
         binding = ActivityScanResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Retrieve the image path and isBackCamera flag from the Intent
         val imagePath = intent.getStringExtra("image_path")
         val isBackCamera = intent.getBooleanExtra("is_back_camera", true)
 
         if (imagePath != null) {
-            // Decode the image file into a bitmap
             val bitmap = BitmapFactory.decodeFile(imagePath)
 
-            // Rotate the bitmap using the utility function
             val rotatedBitmap = rotateBitmap(bitmap, isBackCamera)
 
-            // Set the rotated image to imgResult
             binding.imgResult.setImageBitmap(rotatedBitmap)
 
             uploadAndPredict(File(imagePath))
@@ -76,14 +72,11 @@ class ResultScanActivity : AppCompatActivity() {
                             tvPenyakitDesc.text = prediction.details
                             tvIndication.text = prediction.indication
                             tvTreatment.text = prediction.treatment
-                            //tvDateCreated.text = prediction.createdAt?.let { formatDate(it) }
 
                             cardView.backgroundTintList = ContextCompat.getColorStateList(this@ResultScanActivity, R.color.red)
                         }
 
                     }
-
-
                 }
                 is Result.Error -> {
                     binding.progressBar.visibility = View.GONE
@@ -92,7 +85,6 @@ class ResultScanActivity : AppCompatActivity() {
                     binding.tvIndication.text = getString(R.string.prediction_error)
                     binding.tvTreatment.text = getString(R.string.prediction_error)
                     binding.cardView.backgroundTintList = ContextCompat.getColorStateList(this@ResultScanActivity, R.color.grey)
-                    //Toast.makeText(this, "Error: ${result.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         }

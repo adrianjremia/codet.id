@@ -28,40 +28,38 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/textView7">
 
         <Button
             android:id="@+id/btnLoginStart"
-            android:layout_width="164dp"
+            android:layout_width="0dp"
             android:layout_height="55dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="@color/brown"
             android:text="Login"
-            android:layout_marginEnd="16dp"
-            android:textColor="@color/white"
-            tools:layout_editor_absoluteX="33dp"
-            tools:layout_editor_absoluteY="521dp" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnRegisterStart"
-            android:layout_width="164dp"
+            android:layout_width="0dp"
             android:layout_height="55dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
             android:backgroundTint="@color/brown"
             android:text="Register"
-            android:layout_marginStart="16dp"
-            android:textColor="@color/white"
-            tools:layout_editor_absoluteX="215dp"
-            tools:layout_editor_absoluteY="521dp" />
+            android:textColor="@color/white" />
 
     </LinearLayout>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

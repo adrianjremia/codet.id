@@ -50,11 +50,9 @@ class ScanFragment:Fragment() {
                 REQUEST_CODE_PERMISSIONS
             )
         }
-
         binding.buttonCamera.setOnClickListener { startCameraX() }
         binding.buttonGallery.setOnClickListener { startGallery() }
         binding.buttonUpload.setOnClickListener { getResult() }
-
     }
 
     private fun startGallery() {
@@ -72,7 +70,6 @@ class ScanFragment:Fragment() {
 
     private fun getResult() {
         if (getFile != null) {
-            // Pass the image file path to ResultScanActivity
             val intent = Intent(requireContext(), ResultScanActivity::class.java)
             intent.putExtra("image_path", getFile!!.absolutePath)
             startActivity(intent)
@@ -81,8 +78,6 @@ class ScanFragment:Fragment() {
         }
     }
 
-
-    // Handle the Camera activity result
     @SuppressLint("RestrictedApi")
     private val launcherIntentCameraX = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
@@ -93,7 +88,6 @@ class ScanFragment:Fragment() {
 
             getFile = myFile
 
-            // Rotate the bitmap for back camera photos
             val resultBitmap = rotateBitmap(
                 BitmapFactory.decodeFile(getFile?.path),
                 isBackCamera
@@ -102,7 +96,6 @@ class ScanFragment:Fragment() {
         }
     }
 
-    // Handle the Gallery result
     private val launcherIntentGallery = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
@@ -118,7 +111,6 @@ class ScanFragment:Fragment() {
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
         ContextCompat.checkSelfPermission(requireContext(), it) == PackageManager.PERMISSION_GRANTED
     }
-
 
     companion object {
         const val CAMERA_X_RESULT = 200

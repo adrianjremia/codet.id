@@ -12,6 +12,7 @@ import com.capstone.codet.data.ViewModelFactory
 import com.capstone.codet.databinding.FragmentSettingBinding
 import com.capstone.codet.ui.about.AboutActivity
 import com.capstone.codet.ui.auth.LoginActivity
+import com.capstone.codet.ui.start.StartActivity
 
 class SettingFragment:Fragment() {
 
@@ -35,12 +36,11 @@ class SettingFragment:Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.getThemeSettings().observe(viewLifecycleOwner) { isDarkModeActive ->
-            binding.switchTheme.setOnCheckedChangeListener(null) // Remove listener temporarily
+            binding.switchTheme.setOnCheckedChangeListener(null)
             binding.switchTheme.isChecked = isDarkModeActive
-            binding.switchTheme.setOnCheckedChangeListener(themeSwitchListener) // Reattach listener
+            binding.switchTheme.setOnCheckedChangeListener(themeSwitchListener)
         }
 
-        // Set up listener for switchTheme to save theme setting
         binding.switchTheme.setOnCheckedChangeListener(themeSwitchListener)
 
         binding.tvAboutUs.setOnClickListener {
@@ -52,20 +52,16 @@ class SettingFragment:Fragment() {
             viewModel.logout()
             movesToAuth()
         }
-
-
     }
 
     private fun movesToAuth() {
-        val intents = Intent(requireContext(), LoginActivity::class.java)
+        val intents = Intent(requireContext(), StartActivity::class.java)
         intents.flags =
             Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intents)
         requireActivity().finish()
     }
 
-
-    // Simplified theme switch listener: Only save the setting
     private val themeSwitchListener = CompoundButton.OnCheckedChangeListener { _, isChecked ->
         viewModel.saveThemeSetting(isChecked)
     }

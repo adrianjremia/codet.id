@@ -11,5 +11,4 @@ class RegisterViewModel(private val repository: MainRepository):ViewModel() {
 
     fun register(name: String, email: String, password: String): LiveData<Result<RegisterResponse>> =
         repository.register(name, email, password)
-
 }

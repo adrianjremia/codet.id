@@ -7,7 +7,6 @@ import com.capstone.codet.data.MainRepository
 import com.capstone.codet.data.model.User
 
 class SplashViewModel(private val repository: MainRepository):ViewModel() {
-
     fun getSession(): LiveData<User> {
         return repository.getSession().asLiveData()
     }

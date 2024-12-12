@@ -29,7 +29,6 @@ class SplashActivity:AppCompatActivity() {
         ViewModelFactory.getInstance(this)
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -39,14 +38,6 @@ class SplashActivity:AppCompatActivity() {
                 if (isDarkModeActive) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
             )
         }
-
-//        Handler().postDelayed({
-//            val intent = Intent(this, StartActivity::class.java)
-//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-//            startActivity(intent)
-//            finish()
-//        }, DURATION_TIME)
-
         checkLoginStatus()
         setupView()
 
@@ -58,7 +49,7 @@ class SplashActivity:AppCompatActivity() {
                 if (user.isLogin) {
                     startActivity(Intent(this, MainActivity::class.java))
                 } else {
-                    startActivity(Intent(this, LoginActivity::class.java))
+                    startActivity(Intent(this, StartActivity::class.java))
                 }
                 finish()
             }
